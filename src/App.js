@@ -30,7 +30,7 @@ function App() {
       lionScore
     } < /div> <
     /div> <
-    div className = "timer" > 00: 03 < /div> <
+    div className = "timer" > 40: 00 < /div> <
     div className = "away" >
     <
     h2 className = "away__name" > Tigers < /h2> <
@@ -47,24 +47,34 @@ function App() {
     div className = "homeButtons" > {
       /* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */ } <
     button onClick = {
-      () => setLionScore(lionScore + 1)
+      () => setLionScore(lionScore + 4)
     }
-    className = "homeButtons__touchdown" > Home Touchdown < /button> <
+    className = "homeButtons__touchdown" > Home Tries < /button>
+
+    <
     button onClick = {
-      () => setLionScore(lionScore + 3)
+      () => setLionScore(lionScore + 2)
     }
-    className = "homeButtons__fieldGoal" > Home Field Goal < /button> <
+    className = "homeButtons__fieldGoal" > Home Goal Kick < /button> <
+    button onClick = {
+      () => setLionScore(0)
+    }
+    className = "homeButtons__fieldGoal" > Reset Home < /button> <
     /div> <
     div className = "awayButtons" >
     <
     button onClick = {
-      () => setTigerScore(tigerScore + 6)
+      () => setTigerScore(tigerScore + 4)
     }
-    className = "awayButtons__touchdown" > Away Touchdown < /button> <
+    className = "awayButtons__touchdown" > Away Tries < /button> <
     button onClick = {
-      () => setTigerScore(tigerScore + 3)
+      () => setTigerScore(tigerScore + 2)
     }
-    className = "awayButtons__fieldGoal" > Away Field Goal < /button> <
+    className = "awayButtons__fieldGoal" > Away Goal Kick < /button> <
+    button onClick = {
+      () => setTigerScore(0)
+    }
+    className = "awayButtons__fieldGoal" > Reset Away < /button> <
     /div> <
     /section> <
     /div>
