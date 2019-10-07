@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import "./App.css";
 
 const BottomRow = () => {
-  const [downCount, setDownCount] = useState(0);
   return (
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">{downCount}</div>
-        <button onClick={() => setDownCount(downCount + 1)}>+</button>
-        <button onClick={() => setDownCount(downCount - 1)}>-</button>
+        <div className="down__value">2</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>

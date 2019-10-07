@@ -4,6 +4,7 @@
 }
 
 .scoreboard {
+  height: 500px;
   width: 58%;
   margin: 10rem auto;
   background-color: #0b5402;

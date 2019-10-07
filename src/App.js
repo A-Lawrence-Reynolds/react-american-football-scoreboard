@@ -2,31 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
-secondsToTime(secs){
-  let hours = Math.floor(secs / (60 * 60));
-
-  let divisor_for_minutes = secs % (60 * 60);
-  let minutes = Math.floor(divisor_for_minutes / 60);
-
-  let divisor_for_seconds = divisor_for_minutes % 60;
-  let seconds = Math.ceil(divisor_for_seconds);
-
-  let obj = {
-      "h": hours,
-      "m": minutes,
-      "s": seconds
-  };
-  return obj;
-};
-
-
-
-
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  const [tigerCount, setTigerCount] = useState(0);
+  const [ramsCount, setRamsCount] = useState(0);
   const [lionsCount, setLionsCount] = useState(0);
-  
 
   return (
     <div className="container">
@@ -39,10 +18,10 @@ function App() {
 
             <div className="home__score">{lionsCount}</div>
           </div>
-          <div className="timer">{obj}</div>
+          <div className="timer">12:78</div>
           <div className="away">
-            <h2 className="away__name">Tigers</h2>
-            <div className="away__score">{tigerCount}</div>
+            <h2 className="away__name">Rams</h2>
+            <div className="away__score">{ramsCount}</div>
           </div>
         </div>
         <BottomRow />
@@ -83,32 +62,32 @@ function App() {
         </div>
         <div className="awayButtons">
           <button
-            onClick={() => setTigerCount(tigerCount + 6)}
+            onClick={() => setRamsCount(ramsCount + 6)}
             className="awayButtons__touchdown"
           >
             Away Touchdown
           </button>
 
           <button
-            onClick={() => setTigerCount(tigerCount + 3)}
+            onClick={() => setRamsCount(ramsCount + 3)}
             className="awayButtons__fieldGoal"
           >
             Away Field Goal
           </button>
           <button
-            onClick={() => setTigerCount(tigerCount + 2)}
+            onClick={() => setRamsCount(ramsCount + 2)}
             className="homeButtons__touchdown"
           >
             Away 2 Point Conversion
           </button>
           <button
-            onClick={() => setTigerCount(tigerCount + 1)}
+            onClick={() => setRamsCount(ramsCount + 1)}
             className="homeButtons__touchdown"
           >
             Away Extra Point
           </button>
           <button
-            onClick={() => setLionsCount(0)}
+            onClick={() => setRamsCount(0)}
             className="homeButtons__touchdown"
           >
             Away Reset Points
